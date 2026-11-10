@@ -1,0 +1,117 @@
+
+========== S1  TIES / BOTH_BAD AS HALF-WINS ==========
+  ties+both_bad = 0.5                    overall           n= 71169  rho=0.999 (reliable 0.999)  #1: gemini-2.5-pro
+  ties+both_bad = 0.5                    math              n=  5624  rho=0.997 (reliable 0.998)  #1: minimax-m1
+  ties+both_bad = 0.5                    coding            n= 24362  rho=0.998 (reliable 0.998)  #1: gemini-2.5-pro
+  ties+both_bad = 0.5                    creative_writing  n=  5760  rho=0.996 (reliable 0.996)  #1: gemini-2.0-flash-thinking-exp-01-21  <-- CHANGED
+  ties = 0.5 (both_bad dropped)          overall           n= 63034  rho=0.999 (reliable 0.999)  #1: gemini-2.5-pro
+  ties = 0.5 (both_bad dropped)          math              n=  4861  rho=0.996 (reliable 0.998)  #1: minimax-m1
+  ties = 0.5 (both_bad dropped)          coding            n= 21379  rho=0.999 (reliable 0.999)  #1: gemini-2.5-pro
+  ties = 0.5 (both_bad dropped)          creative_writing  n=  5057  rho=0.998 (reliable 0.998)  #1: gemini-2.0-flash-thinking-exp-01-21  <-- CHANGED
+Spearman(theta, tie rate) = 0.539; Spearman(theta, both_bad rate) = -0.709
+overall tie share 0.160, both_bad share 0.114
+
+========== S2  NO POSITION EFFECT ==========
+  no position effect                     overall           n= 51659  rho=1.000 (reliable 1.000)  #1: gemini-2.5-pro
+  no position effect                     math              n=  3833  rho=1.000 (reliable 1.000)  #1: minimax-m1
+  no position effect                     coding            n= 17522  rho=1.000 (reliable 1.000)  #1: gemini-2.5-pro
+  no position effect                     creative_writing  n=  4248  rho=1.000 (reliable 1.000)  #1: gemini-2.5-pro-preview-03-25
+share of decisive votes won by position A: 0.4952 (n = 51659)
+
+========== S3  EQUAL WEIGHT PER OBSERVED MODEL PAIR ==========
+  equal weight per pair                  overall           n= 51659  rho=0.989 (reliable 0.989)  #1: gemini-2.5-pro
+  equal weight per pair                  math              n=  3833  rho=0.969 (reliable 0.974)  #1: gemini-2.5-pro  <-- CHANGED
+  equal weight per pair                  coding            n= 17522  rho=0.984 (reliable 0.983)  #1: gemini-2.5-pro-preview-03-25  <-- CHANGED
+  equal weight per pair                  creative_writing  n=  4248  rho=0.944 (reliable 0.958)  #1: gemini-2.5-pro-preview-03-25
+
+========== S4  CATEGORY-EXCLUSIVE ROWS ==========
+  category-exclusive rows only           math              n=  2699  rho=0.918 (reliable 0.960)  #1: minimax-m1
+  category-exclusive rows only           coding            n= 16090  rho=0.997 (reliable 0.996)  #1: gemini-2.5-pro-preview-03-25  <-- CHANGED
+  category-exclusive rows only           creative_writing  n=  3911  rho=0.988 (reliable 0.991)  #1: gemini-2.0-flash-thinking-exp-01-21  <-- CHANGED
+
+========== S5  ONE VOTE PER SESSION ==========
+sessions: 45821; share with >1 decisive vote: 0.087; share of rows in multi-vote sessions: 0.190; max 17
+  one random vote per session            overall           n= 45821  rho=0.996 (reliable 0.996)  #1: gemini-2.5-pro
+  one random vote per session            math              n=  3422  rho=0.986 (reliable 0.982)  #1: minimax-m1
+  one random vote per session            coding            n= 15402  rho=0.995 (reliable 0.994)  #1: gemini-2.5-pro
+  one random vote per session            creative_writing  n=  3697  rho=0.972 (reliable 0.982)  #1: gemini-2.5-pro  <-- CHANGED
+robust/model SE ratio overall: mean 1.001, max 1.028
+
+========== S6  ALL LANGUAGES ==========
+  all languages                          overall           n= 98341  rho=0.979 (reliable 0.979)  #1: gemini-2.5-pro
+  all languages                          math              n=  7341  rho=0.958 (reliable 0.965)  #1: gemini-2.5-pro  <-- CHANGED
+  all languages                          coding            n= 28283  rho=0.981 (reliable 0.981)  #1: gemini-2.5-pro
+  all languages                          creative_writing  n=  8423  rho=0.942 (reliable 0.963)  #1: gemini-2.5-pro-preview-03-25
+
+========== S7  REGULARISED / PARTIAL-POOLING CATEGORY RANKINGS ==========
+  ridge l2 = 1                           math              n=  3833  rho=0.999 (reliable 1.000)  #1: minimax-m1
+  partial pooling (lambda = 20)          math              n=  3833  rho=0.974 (reliable 0.973)  #1: gemini-2.5-pro  <-- CHANGED
+                              rank  theta_shrunk  delta  theta_overall  category_only_rank  overall_rank
+gemini-2.5-pro                   1         1.003  0.139          0.865                   2             1
+minimax-m1                       2         0.913  0.668          0.245                   1            12
+gemini-2.5-pro-preview-03-25     3         0.831  0.039          0.792                   4             2
+grok-4-0709                      4         0.673  0.012          0.662                   5             3
+gemini-2.5-flash                 5         0.622  0.186          0.436                   6             9
+  ridge l2 = 1                           coding            n= 17522  rho=1.000 (reliable 1.000)  #1: gemini-2.5-pro
+  partial pooling (lambda = 50)          coding            n= 17522  rho=0.976 (reliable 0.978)  #1: gemini-2.5-pro
+                              rank  theta_shrunk  delta  theta_overall  category_only_rank  overall_rank
+gemini-2.5-pro                   1         0.792 -0.073          0.865                   1             1
+gemini-2.5-pro-preview-03-25     2         0.767 -0.025          0.792                   2             2
+grok-4-0709                      3         0.599 -0.063          0.662                   4             3
+deepseek-r1-0528                 4         0.551 -0.006          0.557                   3             4
+o3-2025-04-16                    5         0.539 -0.017          0.556                   5             5
+  ridge l2 = 1                           creative_writing  n=  4248  rho=0.999 (reliable 1.000)  #1: gemini-2.5-pro-preview-03-25
+  partial pooling (lambda = 50)          creative_writing  n=  4248  rho=0.932 (reliable 0.966)  #1: gemini-2.5-pro  <-- CHANGED
+                              rank  theta_shrunk  delta  theta_overall  category_only_rank  overall_rank
+gemini-2.5-pro                   1         0.868  0.003          0.865                   3             1
+gemini-2.5-pro-preview-03-25     2         0.831  0.040          0.792                   1             2
+grok-3-preview-02-24             3         0.640  0.108          0.533                   4             6
+grok-4-0709                      4         0.615 -0.047          0.662                   6             3
+gemini-2.5-pro-preview-05-06     5         0.529  0.045          0.484                   5             8
+
+========== S8  PAIR-LEVEL GOODNESS OF FIT (ONE-DIMENSIONAL STRENGTH) ==========
+pairs with >= 20 comparisons: 876; Pearson X2 = 909.5 on ~824 df (p = 0.02); X2/df = 1.104
+share of pairs with |z| > 1.96: 0.056 (5% expected under BTL)
+
+========== S9  RANK UNCERTAINTY VS NUMBER OF COMPARISONS ==========
+  Overall           Spearman(n, rank-CI width) = -0.396; median width 6
+  Math              Spearman(n, rank-CI width) = -0.596; median width 19
+  Coding            Spearman(n, rank-CI width) = -0.390; median width 12
+  Creative writing  Spearman(n, rank-CI width) = -0.509; median width 20
+
+========== SUMMARY ==========
+                         analysis             scope      n  spearman_vs_main  spearman_vs_main_reliable                     top1_main                             top1_new top1_same  top3_overlap  gamma
+0             ties+both_bad = 0.5           overall  71169             0.999                      0.999                gemini-2.5-pro                       gemini-2.5-pro      True           3.0 -0.015
+1             ties+both_bad = 0.5              math   5624             0.997                      0.998                    minimax-m1                           minimax-m1      True           3.0  0.014
+2             ties+both_bad = 0.5            coding  24362             0.998                      0.998                gemini-2.5-pro                       gemini-2.5-pro      True           2.0 -0.022
+3             ties+both_bad = 0.5  creative_writing   5760             0.996                      0.996  gemini-2.5-pro-preview-03-25  gemini-2.0-flash-thinking-exp-01-21     False           3.0 -0.005
+4   ties = 0.5 (both_bad dropped)           overall  63034             0.999                      0.999                gemini-2.5-pro                       gemini-2.5-pro      True           3.0 -0.017
+5   ties = 0.5 (both_bad dropped)              math   4861             0.996                      0.998                    minimax-m1                           minimax-m1      True           3.0  0.022
+6   ties = 0.5 (both_bad dropped)            coding  21379             0.999                      0.999                gemini-2.5-pro                       gemini-2.5-pro      True           2.0 -0.025
+7   ties = 0.5 (both_bad dropped)  creative_writing   5057             0.998                      0.998  gemini-2.5-pro-preview-03-25  gemini-2.0-flash-thinking-exp-01-21     False           3.0 -0.006
+8              no position effect           overall  51659             1.000                      1.000                gemini-2.5-pro                       gemini-2.5-pro      True           3.0  0.000
+9              no position effect              math   3833             1.000                      1.000                    minimax-m1                           minimax-m1      True           3.0  0.000
+10             no position effect            coding  17522             1.000                      1.000                gemini-2.5-pro                       gemini-2.5-pro      True           3.0  0.000
+11             no position effect  creative_writing   4248             1.000                      1.000  gemini-2.5-pro-preview-03-25         gemini-2.5-pro-preview-03-25      True           3.0  0.000
+12          equal weight per pair           overall  51659             0.989                      0.989                gemini-2.5-pro                       gemini-2.5-pro      True           2.0 -0.022
+13          equal weight per pair              math   3833             0.969                      0.974                    minimax-m1                       gemini-2.5-pro     False           3.0  0.006
+14          equal weight per pair            coding  17522             0.984                      0.983                gemini-2.5-pro         gemini-2.5-pro-preview-03-25     False           2.0 -0.026
+15          equal weight per pair  creative_writing   4248             0.944                      0.958  gemini-2.5-pro-preview-03-25         gemini-2.5-pro-preview-03-25      True           1.0 -0.006
+16   category-exclusive rows only              math   2699             0.918                      0.960                    minimax-m1                           minimax-m1      True           2.0  0.023
+17   category-exclusive rows only            coding  16090             0.997                      0.996                gemini-2.5-pro         gemini-2.5-pro-preview-03-25     False           3.0 -0.037
+18   category-exclusive rows only  creative_writing   3911             0.988                      0.991  gemini-2.5-pro-preview-03-25  gemini-2.0-flash-thinking-exp-01-21     False           3.0 -0.008
+19    one random vote per session           overall  45821             0.996                      0.996                gemini-2.5-pro                       gemini-2.5-pro      True           3.0 -0.016
+20    one random vote per session              math   3422             0.986                      0.982                    minimax-m1                           minimax-m1      True           2.0  0.021
+21    one random vote per session            coding  15402             0.995                      0.994                gemini-2.5-pro                       gemini-2.5-pro      True           3.0 -0.031
+22    one random vote per session  creative_writing   3697             0.972                      0.982  gemini-2.5-pro-preview-03-25                       gemini-2.5-pro     False           2.0 -0.010
+23                  all languages           overall  98341             0.979                      0.979                gemini-2.5-pro                       gemini-2.5-pro      True           3.0 -0.027
+24                  all languages              math   7341             0.958                      0.965                    minimax-m1                       gemini-2.5-pro     False           1.0  0.002
+25                  all languages            coding  28283             0.981                      0.981                gemini-2.5-pro                       gemini-2.5-pro      True           2.0 -0.030
+26                  all languages  creative_writing   8423             0.942                      0.963  gemini-2.5-pro-preview-03-25         gemini-2.5-pro-preview-03-25      True           3.0 -0.024
+27                   ridge l2 = 1              math   3833             0.999                      1.000                    minimax-m1                           minimax-m1      True           3.0  0.030
+28  partial pooling (lambda = 20)              math   3833             0.974                      0.973                    minimax-m1                       gemini-2.5-pro     False           2.0  0.033
+29                   ridge l2 = 1            coding  17522             1.000                      1.000                gemini-2.5-pro                       gemini-2.5-pro      True           3.0 -0.030
+30  partial pooling (lambda = 50)            coding  17522             0.976                      0.978                gemini-2.5-pro                       gemini-2.5-pro      True           2.0 -0.030
+31                   ridge l2 = 1  creative_writing   4248             0.999                      1.000  gemini-2.5-pro-preview-03-25         gemini-2.5-pro-preview-03-25      True           3.0 -0.009
+32  partial pooling (lambda = 50)  creative_writing   4248             0.932                      0.966  gemini-2.5-pro-preview-03-25                       gemini-2.5-pro     False           2.0 -0.007
+33   pair-level GOF (pairs n>=20)           overall    876               NaN                        NaN                           NaN                                  NaN       NaN           NaN    NaN

@@ -1,0 +1,2 @@
+n_rows_language,n_decisive,n_models,n_sessions,undirected_components,strong_components,gamma,gamma_se,gamma_se_robust,lr_gamma,p_lr_gamma,spearman_btl_raw,top_model,top_p_rank1,converged,bootstrap_not_strongly_connected
+71175,51659,52,45821,1,1,-0.020538787481908686,0.009166921270770229,0.009109053301130569,5.020307442202466,0.02505172064284593,0.9964996158114914,gemini-2.5-pro,0.745,True,0

@@ -1,0 +1,5 @@
+numpy
+pandas
+scipy
+matplotlib
+datasets  # only for explore_data.py

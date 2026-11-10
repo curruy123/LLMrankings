@@ -1,0 +1,103 @@
+
+========== RAW FILE CHECKS ==========
+rows: 135634
+unique models (all languages): 53
+languages present: 126 (top: {'en': 71175, 'pl': 13813, 'und': 11835} )
+self-matches (model_a == model_b): 10
+after language filter (en): 71175
+decisive comparisons used for fitting: 51659
+dropped ties: 11376  dropped both_bad: 8135  (27.4% of en rows)
+evaluation sessions: 45821 | share of sessions with >1 vote: 0.087
+
+========== COVERAGE ==========
+models: 52 | min / median comparisons: 166 / 2136
+models with < 50 comparisons:
+Series([], )
+models present in full data but absent here: ['qwen3-coder-480b-a35b-instruct']
+
+========== COMPARISON GRAPH ==========
+connected components (undirected): 1
+strongly connected components (win graph): 1  <- 1 means the MLE exists for every model
+observed model pairs: 1201 of 1326
+
+========== FIT ==========
+converged: True True | Newton iterations: 5 | Hessian condition number: 303.2
+position effect gamma = -0.0205 (robust SE 0.0091, z = -2.25, p = 0.024)  [positive = position A favoured]
+  -> odds multiplier for position A: 0.980; P(A wins | equal models) = 0.4949
+likelihood-ratio stat for gamma: 5.02 (chi2_1 p = 0.025)
+share of models with identical rank with/without gamma: 0.962
+session-robust / model-based SE ratio: mean 1.001, max 1.028
+
+running 200 session-cluster bootstrap refits for rank uncertainty ...
+
+========== OVERALL BTL RANKING ==========
+                                              rank  theta  se_robust  ci_low_robust  ci_high_robust       elo  n_comparisons  raw_win_rate  rank_ci_low  rank_ci_high  p_rank1
+gemini-2.5-pro                                   1  0.865      0.038          0.791           0.939  1150.223           3491         0.703            1             2    0.745
+gemini-2.5-pro-preview-03-25                     2  0.792      0.083          0.630           0.953  1137.503            672         0.686            1             3    0.235
+grok-4-0709                                      3  0.662      0.087          0.491           0.832  1114.944            592         0.659            2             7    0.020
+deepseek-r1-0528                                 4  0.557      0.043          0.473           0.641  1096.763           2371         0.628            3             8    0.000
+o3-2025-04-16                                    5  0.556      0.036          0.485           0.627  1096.536           3380         0.633            3             8    0.000
+grok-3-preview-02-24                             6  0.533      0.042          0.450           0.616  1092.538           2412         0.622            3             8    0.000
+chatgpt-4o-latest-20250326                       7  0.521      0.038          0.447           0.595  1090.479           3137         0.622            4             9    0.000
+gemini-2.5-pro-preview-05-06                     8  0.484      0.058          0.371           0.597  1084.044           1284         0.611            4            10    0.000
+gemini-2.5-flash                                 9  0.436      0.035          0.367           0.504  1075.705           3551         0.605            7            10    0.000
+llama-4-maverick-03-26-experimental             10  0.370      0.043          0.285           0.455  1064.304           2259         0.586            8            12    0.000
+qwen3-235b-a22b-no-thinking                     11  0.289      0.035          0.220           0.358  1050.196           3370         0.567           10            17    0.000
+minimax-m1                                      12  0.245      0.045          0.156           0.334  1042.580           2035         0.555           11            21    0.000
+deepseek-v3-0324                                13  0.234      0.042          0.151           0.316  1040.599           2349         0.547           11            21    0.000
+gemini-2.5-flash-preview-04-17                  14  0.232      0.046          0.142           0.322  1040.315           1987         0.555           11            22    0.000
+o4-mini-2025-04-16                              15  0.229      0.041          0.149           0.309  1039.799           2549         0.551           11            22    0.000
+gpt-4.1-2025-04-14                              16  0.224      0.040          0.144           0.303  1038.888           2547         0.547           11            21    0.000
+mistral-medium-2505                             17  0.212      0.035          0.142           0.281  1036.761           3337         0.543           12            23    0.000
+qwen3-235b-a22b                                 18  0.208      0.046          0.117           0.299  1036.097           1914         0.538           11            23    0.000
+qwen-max-2025-01-25                             19  0.188      0.049          0.093           0.283  1032.638           1688         0.536           12            25    0.000
+hunyuan-turbos-20250416                         20  0.185      0.085          0.019           0.351  1032.166            546         0.527           10            28    0.000
+gemma-3-27b-it                                  21  0.130      0.039          0.055           0.206  1022.611           2804         0.522           18            26    0.000
+gemini-2.0-flash-thinking-exp-01-21             22  0.123      0.159         -0.188           0.435  1021.427            166         0.542           10            36    0.000
+kimi-k2-0711-preview                            23  0.117      0.063         -0.006           0.240  1020.319           1031         0.527           15            29    0.000
+gemini-2.5-flash-lite-preview-06-17-thinking    24  0.115      0.047          0.022           0.207  1019.907           1832         0.524           18            27    0.000
+grok-3-mini-high                                25  0.072      0.064         -0.053           0.197  1012.492           1009         0.523           21            31    0.000
+grok-3-mini-beta                                26  0.071      0.042         -0.012           0.153  1012.254           2323         0.508           21            30    0.000
+qwen3-235b-a22b-instruct-2507                   27  0.066      0.131         -0.190           0.322  1011.420            249         0.514           10            35    0.000
+claude-opus-4-20250514                          28  0.035      0.033         -0.030           0.100  1006.105           3767         0.495           23            30    0.000
+claude-opus-4-20250514-thinking-16k             29  0.023      0.043         -0.062           0.108  1003.943           2213         0.496           23            31    0.000
+gpt-4o-2024-11-20                               30 -0.038      0.129         -0.291           0.215   993.386            246         0.500           17            39    0.000
+claude-sonnet-4-20250514-thinking-32k           31 -0.057      0.045         -0.145           0.030   990.068           2055         0.476           27            35    0.000
+qwq-32b                                         32 -0.065      0.048         -0.160           0.030   988.713           1746         0.472           28            35    0.000
+mistral-small-2506                              33 -0.079      0.071         -0.218           0.060   986.348            811         0.473           26            37    0.000
+gpt-4.1-mini-2025-04-14                         34 -0.109      0.042         -0.192          -0.027   981.002           2319         0.463           30            36    0.000
+gemini-2.0-flash-001                            35 -0.119      0.041         -0.199          -0.040   979.273           2510         0.465           30            36    0.000
+command-a-03-2025                               36 -0.217      0.040         -0.295          -0.138   962.339           2556         0.433           34            40    0.000
+claude-sonnet-4-20250514                        37 -0.233      0.037         -0.306          -0.160   959.521           3042         0.431           35            40    0.000
+qwen3-30b-a3b                                   38 -0.234      0.045         -0.323          -0.145   959.331           1979         0.433           34            40    0.000
+o3-mini                                         39 -0.298      0.040         -0.377          -0.218   948.297           2581         0.417           37            41    0.000
+gemma-3n-e4b-it                                 40 -0.312      0.068         -0.445          -0.178   945.850            905         0.411           35            43    0.000
+llama-4-scout-17b-16e-instruct                  41 -0.372      0.066         -0.501          -0.244   935.317            978         0.394           38            45    0.000
+amazon-nova-experimental-chat-05-14             42 -0.383      0.061         -0.502          -0.265   933.417           1148         0.396           38            46    0.000
+llama-4-maverick-17b-128e-instruct              43 -0.443      0.046         -0.533          -0.354   922.973           2059         0.384           41            46    0.000
+claude-3-7-sonnet-20250219                      44 -0.468      0.040         -0.547          -0.389   918.674           2768         0.368           42            46    0.000
+claude-3-7-sonnet-20250219-thinking-32k         45 -0.484      0.040         -0.562          -0.405   915.962           2798         0.365           42            46    0.000
+claude-3-5-sonnet-20241022                      46 -0.487      0.039         -0.564          -0.410   915.435           2803         0.372           43            46    0.000
+llama-3.3-70b-instruct                          47 -0.599      0.048         -0.693          -0.505   895.904           1950         0.342           46            49    0.000
+mistral-small-3.1-24b-instruct-2503             48 -0.648      0.063         -0.771          -0.526   887.377           1145         0.332           47            51    0.000
+amazon.nova-pro-v1:0                            49 -0.672      0.044         -0.759          -0.586   883.215           2383         0.330           47            50    0.000
+magistral-medium-2506                           50 -0.721      0.074         -0.865          -0.577   874.774            852         0.318           47            52    0.000
+claude-3-5-haiku-20241022                       51 -0.842      0.044         -0.928          -0.756   853.716           2549         0.289           50            52    0.000
+gpt-4o-mini-2024-07-18                          52 -0.889      0.137         -1.158          -0.620   845.552            270         0.289           48            52    0.000
+
+#1 vs #2: gemini-2.5-pro - gemini-2.5-pro-preview-03-25: diff 0.073 (SE 0.092, z 0.79); P(win) = 0.518
+
+========== BTL vs RAW WIN RATE ==========
+Spearman correlation of BTL strength with raw win rate: 0.9965
+Largest rank changes after adjusting for opponent strength:
+                                     rank  raw_rank  rank_shift  raw_win_rate  n_comparisons
+gemini-2.0-flash-thinking-exp-01-21    22        18          -4         0.542            166
+gemma-3-27b-it                         21        25           4         0.522           2804
+deepseek-v3-0324                       13        16           3         0.547           2349
+claude-opus-4-20250514                 28        30           2         0.495           3767
+gpt-4o-2024-11-20                      30        28          -2         0.500            246
+claude-3-5-sonnet-20241022             46        44          -2         0.372           2803
+qwen3-30b-a3b                          38        36          -2         0.433           1979
+qwen-max-2025-01-25                    19        20           1         0.536           1688
+
+Saved: outputs/overall_ranking.csv | outputs/overall_fit_summary.csv

@@ -1,0 +1,114 @@
+
+========== MATH ==========
+kappa (category spread relative to rest) = 1.060 [95% profile CI 0.94, 1.18]
+LR sep vs same  (any difference):         167.1 on 51 df, p = 2.89e-14
+robust Wald sep vs same:                  152.7 on 51 df, p = 4.49e-12
+LR sep vs scale (ranking difference):     166.3 on 50 df, p = 2.11e-14
+models with significant category-specific deviation (BH q < 0.10, reliable): 6
+                          delta     se      z   q_bh specialist
+minimax-m1                1.151  0.185  6.214  0.000   stronger
+qwen3-235b-a22b           0.699  0.227  3.081  0.021   stronger
+o3-mini                   0.496  0.152  3.257  0.016   stronger
+claude-sonnet-4-20250514  0.480  0.149  3.230  0.016   stronger
+deepseek-r1-0528         -0.595  0.199 -2.981  0.025     weaker
+gemma-3-27b-it           -0.602  0.153 -3.942  0.002     weaker
+Spearman vs overall, all 52 models: 0.824 (bootstrap 95% CI 0.699-0.830)
+  null (no task effect) median 0.889, 95% range 0.833-0.936; P(null <= observed) = 0.030
+Spearman vs overall, 37 reliable models: 0.769; null median 0.928, P = 0.005
+largest drops / gains (all models):
+                          overall_rank  category_rank  rank_change category_rank_ci  n_category  reliable  null_expected_abs_change  null_p_abs_change  spec_q
+deepseek-r1-0528                     4             28          -24            10-39         114      True                     3.975              0.005   0.025
+gemma-3-27b-it                      21             40          -19            33-46         207      True                     4.510              0.010   0.002
+deepseek-v3-0324                    13             30          -17            18-37         186      True                     6.290              0.050   0.211
+mistral-medium-2505                 17             31          -14            21-37         230      True                     4.430              0.005   0.190
+qwen3-235b-a22b                     18              3           15             1-11         111      True                     5.660              0.040   0.021
+o3-mini                             39             23           16            12-34         192      True                     3.890              0.005   0.016
+claude-sonnet-4-20250514            37             20           17            10-31         207      True                     3.865              0.005   0.016
+grok-3-mini-high                    25              7           18             3-30          55     False                     8.615              0.070   0.338
+
+========== CODING ==========
+kappa (category spread relative to rest) = 0.859 [95% profile CI 0.80, 0.92]
+LR sep vs same  (any difference):         219.1 on 51 df, p = 1.02e-22
+robust Wald sep vs same:                  215.6 on 51 df, p = 4.04e-22
+LR sep vs scale (ranking difference):     201.4 on 50 df, p = 4.54e-20
+models with significant category-specific deviation (BH q < 0.10, reliable): 11
+                                       delta     se      z   q_bh specialist
+claude-sonnet-4-20250514-thinking-32k  0.522  0.092  5.674  0.000   stronger
+claude-opus-4-20250514-thinking-16k    0.357  0.088  4.073  0.001   stronger
+mistral-small-2506                     0.351  0.141  2.494  0.060   stronger
+gpt-4.1-mini-2025-04-14                0.285  0.086  3.322  0.008   stronger
+claude-opus-4-20250514                 0.275  0.069  3.998  0.001   stronger
+claude-sonnet-4-20250514               0.190  0.075  2.537  0.058   stronger
+amazon.nova-pro-v1:0                  -0.289  0.091 -3.187  0.009     weaker
+minimax-m1                            -0.309  0.094 -3.279  0.008     weaker
+gemma-3-27b-it                        -0.334  0.077 -4.320  0.000     weaker
+gemma-3n-e4b-it                       -0.375  0.139 -2.690  0.041     weaker
+llama-3.3-70b-instruct                -0.379  0.100 -3.779  0.002     weaker
+Spearman vs overall, all 52 models: 0.871 (bootstrap 95% CI 0.818-0.892)
+  null (no task effect) median 0.956, 95% range 0.925-0.976; P(null <= observed) = 0.005
+Spearman vs overall, 51 reliable models: 0.884; null median 0.962, P = 0.005
+largest drops / gains (all models):
+                                       overall_rank  category_rank  rank_change category_rank_ci  n_category  reliable  null_expected_abs_change  null_p_abs_change  spec_q
+minimax-m1                                       12             30          -18            22-36         615      True                     4.685              0.005   0.008
+gemini-2.0-flash-thinking-exp-01-21              22             39          -17            15-48          57     False                    11.070              0.199   0.330
+gemini-2.5-flash-preview-04-17                   14             28          -14            16-33         657      True                     4.400              0.030   0.149
+gemma-3-27b-it                                   21             34          -13            28-38         974      True                     3.020              0.010   0.000
+claude-opus-4-20250514                           28             15           13            11-24        1197      True                     2.530              0.005   0.001
+claude-opus-4-20250514-thinking-16k              29             13           16            10-24         743      True                     3.455              0.005   0.001
+claude-sonnet-4-20250514-thinking-32k            31             12           19             7-20         656      True                     2.865              0.005   0.000
+gpt-4o-2024-11-20                                30             11           19             2-30          84      True                     7.410              0.060   0.111
+
+========== CREATIVE WRITING ==========
+kappa (category spread relative to rest) = 0.931 [95% profile CI 0.83, 1.03]
+LR sep vs same  (any difference):          95.2 on 51 df, p = 1.71e-04
+robust Wald sep vs same:                   93.5 on 51 df, p = 2.65e-04
+LR sep vs scale (ranking difference):      93.9 on 50 df, p = 1.69e-04
+models with significant category-specific deviation (BH q < 0.10, reliable): 2
+                         delta     se      z   q_bh specialist
+gpt-4.1-mini-2025-04-14 -0.488  0.158 -3.099  0.050     weaker
+qwen3-30b-a3b           -0.633  0.176 -3.595  0.017     weaker
+Spearman vs overall, all 52 models: 0.856 (bootstrap 95% CI 0.687-0.848)
+  null (no task effect) median 0.882, 95% range 0.812-0.940; P(null <= observed) = 0.219
+Spearman vs overall, 45 reliable models: 0.881; null median 0.920, P = 0.075
+largest drops / gains (all models):
+                                         overall_rank  category_rank  rank_change category_rank_ci  n_category  reliable  null_expected_abs_change  null_p_abs_change  spec_q
+qwen3-235b-a22b-no-thinking                        11             27          -16            16-33         283      True                     5.925              0.035   0.406
+qwen3-235b-a22b                                    18             34          -16            23-43         171      True                     5.055              0.035   0.251
+o4-mini-2025-04-16                                 15             30          -15            18-37         209      True                     5.605              0.055   0.406
+minimax-m1                                         12             24          -12            11-35         154      True                     6.460              0.154   0.659
+claude-3-7-sonnet-20250219-thinking-32k            45             35           10            26-43         224      True                     3.170              0.025   0.370
+qwen-max-2025-01-25                                19              9           10             4-27         131      True                     6.290              0.239   0.565
+gpt-4o-mini-2024-07-18                             52             33           19             2-52          15     False                     6.010              0.090   0.508
+gemini-2.0-flash-thinking-exp-01-21                22              2           20             1-33          17     False                    12.830              0.209   0.424
+
+========== SUMMARY ==========
+                                              0         1                 2
+category                                   math    coding  creative_writing
+n_comparisons                              3833     17522              4248
+kappa                                    1.0596    0.8591            0.9306
+kappa_ci_low                             0.9396    0.7991            0.8306
+kappa_ci_high                            1.1796    0.9191            1.0306
+lr_any                                 167.1032  219.1231           95.2372
+p_any                                       0.0       0.0            0.0002
+wald_robust_any                        152.6542  215.5788           93.4767
+p_wald_any                                  0.0       0.0            0.0003
+lr_ranking                             166.2521  201.4371           93.9333
+p_ranking                                   0.0       0.0            0.0002
+df_ranking                                   50        50                50
+spearman_all                             0.8238    0.8706            0.8557
+spearman_all_boot_lo                      0.699    0.8181            0.6867
+spearman_all_boot_hi                     0.8302    0.8917            0.8481
+null_spearman_all_median                 0.8892    0.9555            0.8823
+null_spearman_all_lo                      0.833    0.9248            0.8119
+p_spearman_all_vs_null                   0.0299     0.005            0.2189
+n_reliable                                   37        51                45
+spearman_reliable                        0.7688    0.8842            0.8814
+null_spearman_reliable_median            0.9279    0.9616            0.9201
+p_spearman_reliable_vs_null               0.005     0.005            0.0746
+mean_abs_rank_change                     6.6538    5.1154            6.4615
+null_mean_abs_rank_change                5.0973    3.0821            5.2219
+share_overall_rank_inside_category_ci      0.75    0.8077            0.8269
+n_specialists_stronger                        4         6                 0
+n_specialists_weaker                          2         5                 2
+
+Saved tables and figures.

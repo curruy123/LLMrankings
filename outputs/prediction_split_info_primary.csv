@@ -1,0 +1,4 @@
+split,category,n_train,n_test,dropped_absent_overall,fallback_rows,category_ridge_needed,lambda,train_logloss_overall,train_logloss_category,train_logloss_shrunk,rec_overall,rec_category_raw,rec_category,rec_shrunk,gamma_overall,gamma_category,gamma_shrunk
+primary,math,3050,783,0,0,False,20,0.6470306258289427,0.6259832358416741,0.6296593065347045,gemini-2.5-pro,minimax-m1,minimax-m1,gemini-2.5-pro,-0.025403030098365358,0.037499303779855414,0.04259095873064875
+primary,coding,14018,3504,0,0,False,50,0.6589565746322286,0.6545844592898693,0.6550475380978636,gemini-2.5-pro,gemini-2.5-pro,gemini-2.5-pro,gemini-2.5-pro,-0.025403030098365358,-0.047644454387733286,-0.04752071358130508
+primary,creative_writing,3449,799,0,0,False,50,0.6574398357565392,0.6460594055671425,0.6506623465447948,gemini-2.5-pro,gemini-2.5-pro-preview-03-25,gemini-2.5-pro,gemini-2.5-pro,-0.025403030098365358,-0.0016944291340708698,0.001771440042630092

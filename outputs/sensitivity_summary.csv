@@ -1,0 +1,35 @@
+analysis,scope,n,spearman_vs_main,spearman_vs_main_reliable,top1_main,top1_new,top1_same,top3_overlap,gamma,note
+ties+both_bad = 0.5,overall,71169,0.9990608725347904,0.9990608725347904,gemini-2.5-pro,gemini-2.5-pro,True,3.0,-0.015206144252575588,
+ties+both_bad = 0.5,math,5624,0.9971826176043712,0.9978662873399715,minimax-m1,minimax-m1,True,3.0,0.014049400435428456,
+ties+both_bad = 0.5,coding,24362,0.9984632459660207,0.998371040723982,gemini-2.5-pro,gemini-2.5-pro,True,2.0,-0.02227552007280079,
+ties+both_bad = 0.5,creative_writing,5760,0.9960727396909416,0.9963109354413702,gemini-2.5-pro-preview-03-25,gemini-2.0-flash-thinking-exp-01-21,False,3.0,-0.0050310207982466725,
+ties = 0.5 (both_bad dropped),overall,63034,0.9991462477589003,0.9991462477589003,gemini-2.5-pro,gemini-2.5-pro,True,3.0,-0.016607774162505893,
+ties = 0.5 (both_bad dropped),math,4861,0.9959873644668317,0.9978662873399715,minimax-m1,minimax-m1,True,3.0,0.022236992342166344,
+ties = 0.5 (both_bad dropped),coding,21379,0.9992316229830103,0.9991855203619908,gemini-2.5-pro,gemini-2.5-pro,True,2.0,-0.025101186428320054,
+ties = 0.5 (both_bad dropped),creative_writing,5057,0.9979509946213607,0.9976284584980236,gemini-2.5-pro-preview-03-25,gemini-2.0-flash-thinking-exp-01-21,False,3.0,-0.005884553161401056,
+no position effect,overall,51659,0.9999146247758901,0.9999146247758901,gemini-2.5-pro,gemini-2.5-pro,True,3.0,0.0,
+no position effect,math,3833,0.9999146247758901,0.9999999999999999,minimax-m1,minimax-m1,True,3.0,0.0,
+no position effect,coding,17522,0.9999999999999999,0.9999999999999999,gemini-2.5-pro,gemini-2.5-pro,True,3.0,0.0,
+no position effect,creative_writing,4248,0.9999146247758901,0.9998682476943345,gemini-2.5-pro-preview-03-25,gemini-2.5-pro-preview-03-25,True,3.0,0.0,
+equal weight per pair,overall,51659,0.9892427217621446,0.9892427217621446,gemini-2.5-pro,gemini-2.5-pro,True,2.0,-0.0219479328450597,"pair counts: median 38, max 172"
+equal weight per pair,math,3833,0.9685819175275334,0.974158368895211,minimax-m1,gemini-2.5-pro,False,3.0,0.006323218959401677,"pair counts: median 3, max 15"
+equal weight per pair,coding,17522,0.9836079569708871,0.9834389140271493,gemini-2.5-pro,gemini-2.5-pro-preview-03-25,False,2.0,-0.025861539657691966,"pair counts: median 13, max 64"
+equal weight per pair,creative_writing,4248,0.943823102535644,0.9583662714097495,gemini-2.5-pro-preview-03-25,gemini-2.5-pro-preview-03-25,True,1.0,-0.006125682684033434,"pair counts: median 3, max 18"
+category-exclusive rows only,math,2699,0.9182959105267651,0.9599336178283546,minimax-m1,minimax-m1,True,2.0,0.022681534405337753,dropped 1134 overlapping rows
+category-exclusive rows only,coding,16090,0.9965849910356014,0.9963800904977375,gemini-2.5-pro,gemini-2.5-pro-preview-03-25,False,3.0,-0.03683910513687404,dropped 1432 overlapping rows
+category-exclusive rows only,creative_writing,3911,0.9884743447451549,0.9907773386034254,gemini-2.5-pro-preview-03-25,gemini-2.0-flash-thinking-exp-01-21,False,3.0,-0.007507691136603232,dropped 337 overlapping rows
+one random vote per session,overall,45821,0.9964996158114914,0.9964996158114914,gemini-2.5-pro,gemini-2.5-pro,True,3.0,-0.015725468784997164,
+one random vote per session,math,3422,0.985998463245966,0.9817449027975342,minimax-m1,minimax-m1,True,2.0,0.02113570037352589,
+one random vote per session,coding,15402,0.9947921113292921,0.9944796380090498,gemini-2.5-pro,gemini-2.5-pro,True,3.0,-0.03091574916205534,
+one random vote per session,creative_writing,3697,0.972423802612482,0.9818181818181818,gemini-2.5-pro-preview-03-25,gemini-2.5-pro,False,2.0,-0.010256211158117728,
+all languages,overall,98341,0.9785708187483991,0.9785708187483991,gemini-2.5-pro,gemini-2.5-pro,True,3.0,-0.02699703153174544,includes qwen3-coder-480b (absent from English)
+all languages,math,7341,0.9576538888414582,0.9653864390706496,minimax-m1,gemini-2.5-pro,False,1.0,0.002209203392428046,
+all languages,coding,28283,0.981302825919918,0.9811764705882352,gemini-2.5-pro,gemini-2.5-pro,True,2.0,-0.030155341159333268,
+all languages,creative_writing,8423,0.9417740971570049,0.9628458498023715,gemini-2.5-pro-preview-03-25,gemini-2.5-pro-preview-03-25,True,3.0,-0.024073097592945812,
+ridge l2 = 1,math,3833,0.9992316229830103,0.9997629208155523,minimax-m1,minimax-m1,True,3.0,0.030084501837967594,
+partial pooling (lambda = 20),math,3833,0.9737898061982413,0.973447131341868,minimax-m1,gemini-2.5-pro,False,2.0,0.03274270543099642,
+ridge l2 = 1,coding,17522,0.9998292495517801,0.9998190045248869,gemini-2.5-pro,gemini-2.5-pro,True,3.0,-0.030021307654198415,
+partial pooling (lambda = 50),coding,17522,0.9758388115768803,0.9776470588235294,gemini-2.5-pro,gemini-2.5-pro,True,2.0,-0.02993810626183255,
+ridge l2 = 1,creative_writing,4248,0.9991462477589003,0.9996047430830038,gemini-2.5-pro-preview-03-25,gemini-2.5-pro-preview-03-25,True,3.0,-0.009292534062168246,
+partial pooling (lambda = 50),creative_writing,4248,0.9318705711602493,0.9657444005270092,gemini-2.5-pro-preview-03-25,gemini-2.5-pro,False,2.0,-0.006564791116705614,
+pair-level GOF (pairs n>=20),overall,876,,,,,,,,"X2=909.5, df~824, p=0.02, share|z|>1.96=0.056"

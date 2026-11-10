@@ -1,0 +1,11 @@
+category,fold,vs,rec_overall,rec_other,n_direct,wins_rec_other
+math,0,category,gemini-2.5-pro,minimax-m1,0,0
+math,1,category,gemini-2.5-pro,minimax-m1,5,2
+math,2,category,gemini-2.5-pro,minimax-m1,0,0
+math,3,category,gemini-2.5-pro,minimax-m1,1,1
+math,4,category,gemini-2.5-pro,minimax-m1,1,1
+coding,1,category,gemini-2.5-pro,gemini-2.5-pro-preview-03-25,0,0
+coding,2,category,gemini-2.5-pro,gemini-2.5-pro-preview-03-25,0,0
+coding,2,shrunk,gemini-2.5-pro,gemini-2.5-pro-preview-03-25,0,0
+creative_writing,1,category,gemini-2.5-pro,grok-3-preview-02-24,0,0
+creative_writing,3,category,gemini-2.5-pro,grok-3-preview-02-24,2,0
